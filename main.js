@@ -9,4 +9,7 @@ function  getComputerChoice() {
 
 
 
+
+const playerSelection = prompt('pick one tool : ','ROCK or PAPER or SCISSORS');
+
 const computerSelection = getComputerChoice();
