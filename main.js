@@ -9,21 +9,27 @@ function  getComputerChoice() {
 
 function playRound(player, computer) {
     let result = "";
+    let playerChoice = player.toLowerCase();
 
     if (player === computer) {
         console.log("its a draw :(");
     }
-    else if(player === 'rock' && computer === 'scissors' || 
-            player === 'paper' && computer === 'rock' ||
-            player === 'scissors' && computer === 'paper') {
-                result = player + " beats " + computer;
+    else if(playerChoice === 'rock' && computer === 'scissors' || 
+            playerChoice === 'paper' && computer === 'rock' ||
+            playerChoice === 'scissors' && computer === 'paper') {
+                result = "Well... you Won!!" + playerChoice + " beats " + computer;
+                console.log(result);
             }
     else {
-        result = computer + " beats " + player;
+        result = "Hey... Loser!!" + computer + " beats " + playerChoice;
+        console.log(result);
     }        
 }
 
 
-const playerSelection = prompt('pick one tool : ','ROCK or PAPER or SCISSORS');
+let playerSelection = prompt('pick one tool : ',"you won't stand a change in front of computer");
 
 const computerSelection = getComputerChoice();
+
+
+console.log(playRound(playerSelection, computerSelection));
