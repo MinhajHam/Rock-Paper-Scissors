@@ -1,0 +1,87 @@
+*,
+*::before
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    font-family: "Comic Sans", "Helvetica Neue", Helvetica, A;
+    background: rgba(255,190,167,255);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+
+.head-content {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    margin-bottom: 50px;
+    /* border: 2px solid blue; */
+}
+
+.middle-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    /* border: 2px solid blueviolet; */
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+}
+
+.rock, .paper, .scissors {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    /* border: 2px solid green; */
+}
+
+
+.rock:hover,.paper:hover,.scissors:hover {
+    top: -15px;
+}
+
+.player-score, .computer-score {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    background: rgb(250, 205, 191);
+    border: 2px solid green;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+}
+
+.status-bar, .score-bar {
+    width: 500px;
+    height: 125px;
+    position: relative;
+    border-radius: 20px;
+    background: rgb(252, 200, 182);
+    border: 1px solid rgb(248, 172, 147)
+}
