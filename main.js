@@ -37,17 +37,18 @@ bottomContent.appendChild(computerScore);
 
 // Bar Div
 const statusBar = document.createElement("div");
-statusBar.classList.add("status-bar");
+statusBar.classList.add("bar");
 boxContainer.appendChild(statusBar);
 
 const scoreBar = document.createElement("div");
-scoreBar.classList.add("score-bar");
+scoreBar.classList.add("bar");
 boxContainer.appendChild(scoreBar);
 
 
 // Bar Text Div 
 const statusTextBar = document.createElement("div");
 statusTextBar.classList.add("bar-text");
+
 statusBar.appendChild(statusTextBar);
 
 const scoreTextBar = document.createElement("div");
@@ -100,13 +101,26 @@ function playRound(player) {
     (playerChoice === "paper" && computerSelection === "rock") ||
     (playerChoice === "scissors" && computerSelection === "paper")
   ) {
-    statusBar.textContent = result =
-      "Well... you Won!! " + playerChoice + " beats " + computerSelection;
+    result = "Well... you Won!! " + playerChoice + " beats " + computerSelection;
     console.log(result);
   } else {
-    statusBar.textContent = result =
-      "Hey... Loser!! " + computerSelection + " beats " + playerChoice;
+    result = "Hey... Loser!! " + computerSelection + " beats " + playerChoice;
     console.log(result);
   }};
 
 
+// let playerSelection = prompt("pick one tool : ", "rock");
+
+
+
+rock.addEventListener("click", () => {
+  playRound("rock");
+});
+
+paper.addEventListener("click", () => {
+  playRound("paper");
+});
+
+scissors.addEventListener("click", () => {
+  playRound("scissors");
+});
