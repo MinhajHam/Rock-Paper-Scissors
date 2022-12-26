@@ -54,16 +54,6 @@ body {
   top: -15px;
 }
 
-.score {
-  width: 300px;
-  height: 300px;
-  cursor: pointer;
-  position: relative;
-  border-radius: 20px;
-  background: rgb(253, 138, 41);
-  /* border: 4px solid rgb(200,96,26); */
-}
-
 .box-container {
   display: flex;
   flex-direction: column;
@@ -75,8 +65,7 @@ body {
   /* border: 2px solid blue; */
 }
 
-.status-bar,
-.score-bar {
+.bar {
   width: 500px;
   height: 125px;
   position: relative;
@@ -86,13 +75,176 @@ body {
   /* rgb(86, 88, 88) */
 }
 
-.status-bar {
-  font-size: 30px;
+/* bar div  */
+.bar-text {
+  width: 450px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 2px solid red; */
+}
+
+/* bar text  */
+.bar-text {
+  font-size: 35px;
   text-align: center;
+  align-items: center;
   justify-content: center;
   color: rgb(86, 88, 88);
   font-family: "Segoe print";
   font-weight: bold;
 }
 
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 20px;
+  background: rgb(253, 138, 41);
+  border: 5px solid white;
+}
 
+.score-text {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.score-text {
+  font-size: 85px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Segoe print";
+  font-weight: bold;
+  /* border: 2px solid red; */
+}
+
+.score-header {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  /* border: 2px solid green; */
+}
+
+.score-header {
+  font-size: 55px;
+  text-align: center;
+  color: rgb(200, 96, 26);
+  font-family: "Segoe print";
+  font-weight: bold;
+  text-shadow: 0 0 2px antiquewhite;
+}
+
+/* Set a style for all buttons */
+button {
+  font-family: "Comic Sans MS";
+  font-size: 20px;
+  background-color: antiquewhite;
+  color: rgb(86, 88, 88);
+  cursor: pointer;
+  width: 40%;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid rgb(253, 138, 41);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.score-container, .btn-container  {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  /* border: 2px solid green; */
+}
+
+.btn-container {
+  margin-top: 35px;
+}
+
+.pop-text {
+  font-size: 45px;
+  text-align: center;
+  font-family: "MV Boli";
+  color: white;
+  /* border: 2px solid red; */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  /* border: 2px solid greenyellow; */
+}
+
+.pop-content {
+  width: 600px;
+  padding-top: 30px;
+  border-radius: 10px;
+  border: 5px solid antiquewhite;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  padding: 10px;
+  background-color: rgb(253, 138, 41);
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  max-width: 600px; 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 2px solid blue; */
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.7s;
+  animation: animatezoom 0.7s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
