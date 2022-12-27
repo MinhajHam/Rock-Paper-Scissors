@@ -21,6 +21,17 @@ body {
   /* border: 2px solid red; */
 }
 
+.popbox-content,
+.score-container,
+.btn-container,
+.score-text,
+.bar-text,
+.score-header {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .head-content {
   display: flex;
   height: 200px;
@@ -90,9 +101,6 @@ body {
 /* bar text  */
 .bar-text {
   font-size: 35px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   color: rgb(86, 88, 88);
   font-family: "Segoe print";
   font-weight: bold;
@@ -121,9 +129,6 @@ body {
 
 .score-text {
   font-size: 85px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   color: white;
   font-family: "Segoe print";
   font-weight: bold;
@@ -135,8 +140,6 @@ body {
   height: 100px;
   display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   word-wrap: break-word;
   /* border: 2px solid green; */
@@ -168,10 +171,8 @@ button:hover {
   opacity: 0.8;
 }
 
-.score-container, .btn-container  {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+.score-container,
+.btn-container {
   margin: 25px;
   /* border: 2px solid green; */
 }
@@ -183,13 +184,13 @@ button:hover {
 .pop-text {
   font-size: 45px;
   text-align: center;
-  font-family: "MV Boli";
+  font-family: "Comic Sans MS";
   color: white;
   /* border: 2px solid red; */
 }
 
 /* The Modal (background) */
-.modal {
+.pop-box {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -212,16 +213,13 @@ button:hover {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.popbox-content {
   padding: 10px;
   background-color: rgb(253, 138, 41);
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  max-width: 600px; 
+  max-width: 600px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   /* border: 2px solid blue; */
 }
 
@@ -247,4 +245,13 @@ button:hover {
   to {
     transform: scale(1);
   }
+}
+
+.container,
+.pop-box {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
