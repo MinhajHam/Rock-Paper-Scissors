@@ -40,6 +40,18 @@ body {
   /* border: 2px solid blue; */
 }
 
+.head-content > h1{
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  font-family: "Segoe print";
+  color: white;
+}
+
+.head-content > h1 > span{
+  color: rgb(253, 138, 41);
+}
+
 .middle-content {
   display: flex;
   justify-content: space-between;
