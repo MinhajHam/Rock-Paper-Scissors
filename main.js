@@ -6,6 +6,13 @@ const modalContent = document.querySelector(".modal-content");
 const popContent = document.querySelector(".pop-content");
 const modal = document.getElementById("pop-up");
 
+// head content - heading (rock, paper, scissors)
+const heading = document.createElement('h1');
+heading.classList.add('heading')
+heading.innerHTML = `<span>rock.</span>paper.<span>scissors</span>`
+headContent.appendChild(heading)
+
+
 // Middle Content Images (rock, paper, scissors)
 const rock = document.createElement("img");
 rock.setAttribute("src", "images/rock.png");
@@ -46,10 +53,12 @@ boxContainer.appendChild(scoreBar);
 
 // Bar Texts
 const statusTextBar = document.createElement("div");
+statusTextBar.textContent = "Player VS Computer"
 statusTextBar.classList.add("bar-text");
 statusBar.appendChild(statusTextBar);
 
 const scoreTextBar = document.createElement("div");
+scoreTextBar.textContent = "⚔️ Let's fight ⚔️"
 scoreTextBar.classList.add("bar-text");
 scoreBar.appendChild(scoreTextBar);
 
